@@ -9,7 +9,7 @@ module.exports = function( grunt ) {
 
 		addtextdomain: {
 			options: {
-				textdomain: 'chatwoot-plugin',
+				textdomain: 'elixarchat',
 			},
 			update_all_domains: {
 				options: {
@@ -32,8 +32,8 @@ module.exports = function( grunt ) {
 				options: {
 					domainPath: '/languages',
 					exclude: [ '\.git/*', 'bin/*', 'node_modules/*', 'tests/*' ],
-					mainFile: 'chatwoot-plugin.php',
-					potFilename: 'chatwoot-plugin.pot',
+					mainFile: 'elixarchat.php',
+					potFilename: 'elixarchat.pot',
 					potHeaders: {
 						poedit: true,
 						'x-poedit-keywordslist': true

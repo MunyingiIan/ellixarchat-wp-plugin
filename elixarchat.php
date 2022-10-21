@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name:     Ellixar Chat Plugin
+ * Plugin Name:     Ellixar Chat 
  * Plugin URI:      https://chat.ellixar.com/
- * Description:     Ellixar Chat Plugin for WordPress. This plugin helps you to quickly integrate Ellixar Chat live-chat widget on Wordpress websites.
+ * Description:     Ellixar Chat for WordPress. This plugin helps you to quickly integrate Ellixar Chat live-chat widget on Wordpress websites.
  * Author:          antpb
  * Author URI:      chat.ellixar.com
- * Text Domain:     chatwoot-plugin
+ * Text Domain:     elixarchat
  * Version:         0.2.0
  *
- * @package         chatwoot-plugin
+ * @package         elixarchat
  */
 
 add_action('admin_enqueue_scripts', 'admin_styles');
@@ -71,7 +71,7 @@ add_action('admin_menu', 'chatwoot_setup_menu');
  * @return {void}.
  */
 function chatwoot_setup_menu(){
-    add_options_page('Option', 'Ellixar Chat Settings', 'manage_options', 'chatwoot-plugin-options', 'chatwoot_options_page');
+    add_options_page('Option', 'Ellixar Chat Settings', 'manage_options', 'elixarchat-options', 'chatwoot_options_page');
 }
 
 add_action( 'admin_init', 'chatwoot_register_settings' );
@@ -90,12 +90,12 @@ function chatwoot_register_settings() {
   add_option('chatwootWidgetPosition', 'right');
   add_option('chatwootLauncherText', '');
 
-  register_setting('chatwoot-plugin-options', 'chatwootSiteToken' );
-  register_setting('chatwoot-plugin-options', 'chatwootSiteURL');
-  register_setting('chatwoot-plugin-options', 'chatwootWidgetLocale' );
-  register_setting('chatwoot-plugin-options', 'chatwootWidgetType' );
-  register_setting('chatwoot-plugin-options', 'chatwootWidgetPosition' );
-  register_setting('chatwoot-plugin-options', 'chatwootLauncherText' );
+  register_setting('elixarchat-options', 'chatwootSiteToken' );
+  register_setting('elixarchat-options', 'chatwootSiteURL');
+  register_setting('elixarchat-options', 'chatwootWidgetLocale' );
+  register_setting('elixarchat-options', 'chatwootWidgetType' );
+  register_setting('elixarchat-options', 'chatwootWidgetPosition' );
+  register_setting('elixarchat-options', 'chatwootLauncherText' );
 }
 
 /**
@@ -110,7 +110,7 @@ function chatwoot_options_page() {
   <div>
     <h2>Ellixar Chat Settings</h2>
     <form method="post" action="options.php" class="chatwoot--form">
-      <?php settings_fields('chatwoot-plugin-options'); ?>
+      <?php settings_fields('elixarchat-options'); ?>
       <div class="form--input">
         <label for="chatwootSiteToken">Ellixar Chat Website Token</label>
         <input
